@@ -1,2 +1,3 @@
 include:
   - board: bbp9981
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
