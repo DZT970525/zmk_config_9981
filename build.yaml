@@ -1,3 +1,2 @@
 include:
   - board: bbp9981
-    snippet: studio-rpc-usb-uart
