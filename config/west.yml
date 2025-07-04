@@ -6,8 +6,8 @@ manifest:
       url-base: https://github.com/DZT970525
   projects:
     - name: zmk
-      remote:DZT970525
+      remote: DZT970525
       revision: main
-      import: app/west.yml
+      import: app  # 表示在 app/ 目录中继续寻找 west.yml
   self:
     path: config
