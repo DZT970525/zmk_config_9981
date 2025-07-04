@@ -1,11 +1,6 @@
-/*
- * Copyright (c) 2022 Duccio Breschi
- *
- * SPDX-License-Identifier: MIT
- */
-
 #include <dt-bindings/zmk/matrix_transform.h>
-#include "bbp9981-layouts.dtsi"
+#include <physical_layouts.dtsi>
+
 
 / {
     bbp9981_layout: bbp9981_layout {
@@ -58,21 +53,20 @@
             , <&key_physical_attrs 125 100  775  400       0     0     0>
             ;
     };
+
+        chosen {
+    zmk,kscan = &kscan0;
+    zmk,physical-layouts = &bbp9981_layout;
 };
-
-  / {
-	chosen {
-
-		zmk,physical-layout = &bbp9981_layout;
-	};
+};
 
 
 &bbp9981_layout{
 	transform = <&default_transform>;
 	kscan = <&kscan0>;
-};
+}; 
 
-bbp9981_udc0: &usbd { 
+zephyr_udc0: &usbd { 
     compatible = "nordic,nrf-usbd"; 
     status = "okay"; 
 };
